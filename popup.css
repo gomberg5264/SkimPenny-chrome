@@ -1,0 +1,173 @@
+html, body{
+	width: 784px;
+	height: 584px;
+	color: #5f5f5f;
+	overflow: hidden;
+	margin: 0;
+	background: whitesmoke;
+}
+
+.priceentry{
+	display: none;
+}
+
+#maindiv{
+	margin: auto;
+	font-family: 'Segoe UI', Cantarell;
+	vertical-align: middle;
+	height: 584px;
+	overflow: hidden;
+	font-size: 35px;
+	text-align: center;
+	line-height: 534px;
+	animation: loadshake 1s infinite;
+}
+
+@keyframes loadshake{
+	0% {
+		padding-top: 10px;
+	}
+	50% {
+		padding-top: 0;
+	}
+	100% {
+		padding-top: 10px;
+	}
+}
+
+/* HEADER */
+
+a#fav_button {
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+a#sett_button {
+    float: right;
+    height: 50px;
+    width: 50px;
+}
+
+a#sett_button img, a#fav_button img{
+    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+span#itemname {
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    font-weight: bold;
+    font-size: large;
+    width: 684px;
+}
+
+header {
+    background: #191919;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    line-height: 50px;
+    box-shadow: 0 0 4px 0px #3c3c3c;
+    color: #e6e6e6;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+/* Dropdown menu */
+
+#settDropdown{
+	display: none;
+	position: absolute;
+	right: 0;
+	width: 200px;
+	top: 50px;
+	z-index: 10000;
+}
+
+#settDropdown a {
+	background: #fbfbfb;
+	display: block;
+	text-align: right;
+	text-decoration: none;
+	color: #191919;
+	border-bottom: 1px solid #bdbdbd;
+	border-left: 1px solid #bdbdbd;
+	line-height: 40px;
+	font-size: larger;
+	padding-right: 10px;
+}
+
+#settDropdown a:hover {
+	background: #e8e8e8;
+}
+
+@keyframes fadein{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes rotate60{
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(60deg); }
+}
+
+/* Favorites */
+
+.favorite{
+	background: #e0e0e0;
+	height: 200px;
+	margin: 25px 10px;
+	font-size: large;
+	padding: 10px;
+	box-shadow: 0 0 3px 0px #616161;
+	border-radius: 3px;
+}
+
+div.favchart {
+    display: inline-block;
+    float: right;
+    width: 325px;
+    line-height: 196px;
+    text-align: center;
+    background: #efefef;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.favinfo {
+	position: relative;
+    display: inline-block;
+    height: 100%;
+    max-width: 400px;
+}
+
+.itemLastVisit, .itemCurrency{
+	font-size: small;
+}
+
+span.deleteFav{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+a{
+    color: #006eff;
+    text-decoration: none;
+}
+
+#nofavorites{
+	display: block;
+	text-align: center;
+	font-size: x-large;
+	margin-top: 40px;
+}
+#chart.div{
+	text-align: center;
+	font-size: x-large;
+	margin-top: 70px;
+}

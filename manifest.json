@@ -1,0 +1,70 @@
+{
+  "content_scripts": [
+    {
+        "js": [ "jquery.min.js", "SPAPI.js", "storeSpecific.js", "skimpenny.js" ],
+        "matches": [ 
+          "*://www.ldlc.com/fiche/*",
+          "*://ldlc.com/fiche/*",
+          "*://shop.hardware.fr/fiche/*",
+          "*://www.cdiscount.com/*/*/*/f-*",
+          "*://www.conrad.fr/ce/fr/product/*/*",
+          "*://store.nike.com/*/pid-*/pgid-*",
+          "*://www.grosbill.com/4-*",
+          "*://www.undiz.com/*/*/*.html*",
+          "*://*.romwe.com/*-p-*-cat-*.html*",
+          "*://www.amazon.fr/*/dp/*",
+          "*://www.amazon.fr/gp/product/*",
+          "*://www.amazon.fr/dp/*",
+          "*://www.amazon.com/*/dp/*",
+          "*://www.amazon.com/gp/product/*",
+          "*://www.amazon.com/dp/*",
+          "*://www.amazon.co.uk/*/dp/*",
+          "*://www.amazon.co.uk/gp/product/*",
+          "*://www.amazon.co.uk/dp/*",
+          "*://www.amazon.co.uk/d/*/*/*",
+          "*://www.zalando.fr/*.html*",
+          "*://www.caseking.de/*.html*",
+          "*://www.newegg.com/Product/Product.aspx?*",
+          "*://www.newegg.com/Product/ComboBundleDetails.aspx?*",
+          "*://www.gearbest.com/*/pp_*.html*",
+          "*://www.rueducommerce.fr/produit/*",
+          "*://www.topachat.com/pages/detail2_cat_*.html*",
+          "*://*.aliexpress.com/item/*/*.html*",
+          "*://www.materiel.net/*/*.html*",
+          "*://*.fnac.com/*/*"],
+        "all_frames": true
+      }],
+
+   "icons": {
+      "128": "img/sp128.png",
+      "16": "img/sp16.png",
+      "48": "img/sp48.png"
+   },
+   "manifest_version": 2,
+
+   "default_locale": "en",
+
+   "name": "SkimPenny Price Tracker",
+
+   "short_name": "SkimPenny",
+
+   "description": "__MSG_extDesc__",
+
+   "permissions": [ "storage", "tabs", "notifications", "*://waxence.fr/*"],
+
+   "version": "0.5.5.0",
+
+   "page_action": {
+      "default_title": "Worth buying?",
+      "default_popup": "popup.html"
+    },
+
+   "background":{
+    "scripts" : ["jquery.min.js", "SPAPI.js", "storeSpecific.js", "eventPage.js"],
+    "persistent": false
+   },
+    "options_ui": {
+      "page": "settings.html",
+      "chrome_style": true
+   }
+}
